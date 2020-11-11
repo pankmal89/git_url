@@ -1,0 +1,6 @@
+---
+- hosts: workstation
+  become: true
+  tasks:
+        - name: creatimg group
+          raw: cgcreate -a root.root -t root.root -g cpuacct.memory.pids.ansible-runner
